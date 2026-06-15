@@ -1,0 +1,11 @@
+ Scaling Single File Uploads (From 50MB to Multi-GBs)
+The Problem: Node/Express buffers file payloads directly in memory (multer.memoryStorage()). Setting the single file limit to multiple GBs will instantly trigger Out Of Memory (OOM) crashes in standard sandboxed containers.
+The Free Setup Solution:
+Direct-to-Cloud Object Storage using Pre-signed URLs: Register a free account with Cloudflare R2 (comes with 10GB free storage monthly and absolutely zero egress bandwidth fees). Have your server.ts generate a temporary, secure Pre-signed upload URL, and upload the file directly from the user's browser straight to Cloudflare R2. This moves 100% of the upload load away from your server, supporting multi-gigabyte files easily.
+Tus Protocol Chunking: Use chunked file uploaders to slice large documents into manageable 5MB blocks. If a network drops, the upload automatically resumes from the last successfully synced chunk.
+B. Scaling Combined Data Store & Vector Storage (To Multi-GBs)
+The Problem: Disk write locks and search parsing lags when a flat db.json file grows past hundreds of megabytes.
+The Free Setup Solution (100% Free Managed Indexes):
+Supabase (Managed PostgreSQL + pgvector): Provides a 100% Free Tier containing 500MB of database space. You can easily create a table with a VECTOR(768) column to index millions of text blocks and execute sub-millisecond cosine similarity queries natively in SQL.
+Pinecone Serverless Starter Tier: Offers a shared multi-tenant index supporting up to ~100,000 vector records for free (equivalent to roughly 1GB - 2GB of raw sliced context data).
+Qdrant Cloud Free Tier: Offers a managed cluster of 1GB RAM and 4GB Disk capacity for vector database search optimization, fully free.
