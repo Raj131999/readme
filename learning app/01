@@ -1,0 +1,56 @@
+Act as a Senior Mobile App Developer and UI/UX Designer. I want to build a 100% offline Core Java learning app. The UI/UX, progression tree, and visual styling must strictly mimic the "Lotus Chess" interface shown in the attached screenshots. 
+
+### THE OFFLINE ARCHITECTURE REQUIREMENTS
+1. NO External Integrations: Remove all GitHub, Git, or cloud dependencies. 
+2. Localized Content: The learning tracks, code lines, code optimization exercises, and quick puzzles are completely pre-compiled and served directly from a local offline storage layer (e.g., SQLite, Room Database, or local JSON assets).
+3. Local Spaced-Repetition: Run a lightweight, offline variation of the SuperMemo (SM-2) algorithm tracking 'Mastery Level' locally on the device's storage.
+
+### UI & VISUAL LAYOUT SPECIFICATION (Strictly matching the images)
+Generate a 4-Tab Mobile Layout (Using Flutter or React Native) that builds out the following design structures:
+
+#### A. Global Page Framework (Top & Bottom Elements)
+- **Top Header Bar:** Left arrow back button, Course Title centered (e.g., "Java Object-Oriented Programming"), a streak icon, and a profile icon.
+- **Top Rank Progress Card:** A clean white card containing a horizontal slider tracking rank progression (Beginner ➔ Novice ➔ Apprentice) or a circular icon showing total topic mastery (e.g., "Master the top 25 code structures", tracking "11/50").
+- **Sub-Navigation Tabs:** Just below the header card, implement a flat text sub-menu bar: [ "Core Course" | "Advanced/Crushing" | "Edge Cases/Variations" ].
+- **Bottom Actions Bar:** Fixed at the bottom of the active screen are two large, high-contrast rectangular action buttons with rounded corners: [ Increase Your Mastery ] and [ Learn New Lines ].
+- **Bottom Navigation Tabs:** 4 primary icons: [ Core Tracks | Refactor/Debug | Puzzles | Stats ].
+
+#### B. The Learning Path Tree Layout (The Scrolling Feed)
+- **Section Banner:** A large, solid-color rectangular alert card that dynamically labels the current block (e.g., "Beginner, SECTION 1: Learn the top 25 syntax lines").
+- **The Node Trail:** A vertically scrolling, zig-zagging trail of large circular buttons representing individual code modules.
+- **Circular Progress Ring:** Each node is surrounded by a multi-colored outer ring tracking completed repetitions (e.g., text under the icon reads "3/10" or "1/10").
+- **Lock States:** Unlocked nodes feature clear, actionable icons (like a boxing glove or star). Locked future nodes are greyed out with a lock icon, showing an explicit floating bubble that says "UNLOCK" when tapped.
+- **Background Detail:** A faint, stylized watermark graphic (similar to the lotus flower) sits natively behind the bottom section of the node trail.
+
+### THE 4 TRANSLATED FUNCTIONAL TABS
+
+1. "CORE TRACKS" TAB (Modeled after Openings)
+- Displays the zig-zagging node trail from the screenshots. Tapping an active node launches the "Drill Station."
+- **The Drill Station:** Displays a block of Java code from local storage with missing segments. The user must select or type the exact syntax lines from memory. If incorrect, it forces a retry of that specific sequence.
+
+2. "REFACTOR & DEBUG" TAB (Modeled after Endgames)
+- Contains structured, offline scenarios (60+ lessons) focusing on fixing and finalizing logic.
+- Instead of an engine, it uses pre-defined local unit tests. The user modifies a broken code snippet entirely offline until it passes the pre-written static test assertions.
+
+3. "COMPILER PUZZLES" TAB (Modeled after Puzzles)
+- A rapid-fire offline quiz gym pulling from a local pool of 1,000+ micro-challenges.
+- Formats: "Spot the NullPointerException", "What does this loop print?", or "Identify the syntax error."
+
+4. "STATS" TAB (Modeled after Progress/Profile)
+- Local dashboard reading the offline database to display current mastery scores, streak count, and a list of specific Java concepts due for a spaced-repetition review today.
+
+---
+
+### REQUIRED OUTPUT DELIVERABLES:
+1. **Database Schema:** Provide the local relational schema (SQLite/Room) or JSON structured data framework required to house the localized Core Java courses, puzzle sets, and user mastery tracking records.
+2. **UI Component Code:** Provide the frontend UI layout code representing the exact visual hierarchy shown in the images (Header card, Sub-tabs, Section Banner, Zig-zagging circular nodes with progress text, and the floating Bottom Actions).
+
+
+Engineering Note for Your Offline Compiler
+Since the app must run 100% offline, you won't have a remote server to compile the user's code. To keep things lightweight on a mobile device:
+
+Don't compile raw code: Instead of running a heavy, real-world Java virtual machine inside the phone app, treat the code like string patterns and Abstract Syntax Trees (AST).
+
+How to check answers: Store the correct answers as regex patterns, exact string tokens, or structural trees locally. When the user types or chooses code in the "Drill Station," the app simply compares their input text directly against the local answer key. This makes the app lightning-fast and perfectly functional without using any data or battery-heavy background processing!
+
+
