@@ -1,1 +1,31 @@
+Act as a Principal Software Architect and Lead Mobile App Developer. I want to build a Java Programming Learning App modeled explicitly after the pedagogical mechanics and UI structure of "Lotus Chess - Trainer." 
 
+The core philosophy of this app is active recall, spaced repetition, integration with real user data, and gamified conversion—eliminating passive text reading in favor of "muscle memory" code drafting.
+
+Generate the complete architecture blueprint, data schemas, UI layout specification, and initial boilerplate code for a 4-tab mobile application with the following translated specifications:
+
+### 1. "CORE SYNTAX & INTEGRATION" TAB (Modeled after the Openings Tab)
+- **GitHub / GitLab Integration:** Allow users to link their public repositories. The backend parser must scan their recent Java commits to identify compilation failures, linting errors, or common architectural anti-patterns (e.g., memory leaks, improper exception handling). This acts as their personalized "Pitfall Diagnostic."
+- **The Library:** A curated repository of 80+ foundational Java architectural "lines" (e.g., establishing a correct Spring Boot Controller framework, building a thread-safe Singleton, setting up JDBC connections).
+- **The Drill Station:** A mobile-friendly interactive code canvas. The app drops the user into a mid-completed code block. The user must type the correct next logical lines of Java code from memory. Real-time abstract syntax tree (AST) matching flags structural syntax errors instantly. If the user overrides with a valid alternative framework choice, the drill path dynamically branches to accommodate it.
+
+### 2. "REFACTOR & DEBUG" TAB (Modeled after the Endgames Tab)
+- **Structured Refactoring Lessons:** 60+ progressive lessons categorized by software concepts (e.g., turning spaghetti nested-IF blocks into Polymorphism, optimizing O(N²) loops to O(N), implementing clean Try-With-Resources blocks).
+- **Practice Scenarios:** 180+ broken or severely unoptimized static Java classes.
+- **The Mock Compiler Arena:** Instead of a chess engine, users are placed against a stubborn "Adversarial Code Environment." The user must modify, optimize, and refactor the code block until all unit tests pass. The environment dynamically changes edge-case inputs to try and break the user's code, forcing them to learn "defensive coding" by converting a broken codebase into production-ready software.
+
+### 3. "COMPILER PUZZLES" TAB (Modeled after the Puzzles Tab)
+- **Tactical Database:** A library of 10,000+ rapid-fire micro-challenges. These are visual, 30-second challenges designed for rapid pattern recognition. 
+- Examples: "Spot the NullPointerException in this 5-line block", "What does this bitwise operation print?", or "Select the missing keyword to make this compile."
+- **Personalized Filtering:** Track the user's micro-puzzle response velocity and error rates to dynamically alter the puzzle difficulty curve, shifting focus onto weak concepts (e.g., Generics, Multi-threading).
+
+### 4. "PROGRESS & SYNC" TAB (Modeled after the Progress/Profile Tab)
+- **Syntax Mastery Level:** A visual metrics dashboard governed by a Spaced Repetition Algorithm (SuperMemo SM-2 variation). It maps every Java syntax pattern and code structure, displaying a "retention score" and calculating exactly when an old syntax line needs to be pushed back to the Drill Station for a review session.
+- **Backend Hub:** Cloud sync configuration, account data management, and webhook configurations for GitHub monitoring.
+
+---
+
+### OUTPUT REQUIREMENTS:
+1. **Tech Stack Strategy:** Recommend the ideal stack for cross-platform execution (e.g., Flutter or React Native for frontend; Spring Boot or Go for backend parsing).
+2. **Database Schema:** Provide a relational database layout (PostgreSQL) or JSON structure outlining how a user's code "Mastery Level" and spaced-repetition schedules are saved.
+3. **Mock UI Component:** Provide the layout code for the "Drill Station" UI, detailing how code auto-completion and interactive text-inputs are seamlessly integrated within standard prose text on a mobile view.
