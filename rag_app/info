@@ -1,0 +1,12 @@
+You can download this pre-embedded dataset directly in three standard formats:
+
+JSON Format (Google AI Studio & Gemini API):
+Beautifully structured JSON containing the original segmented texts mapped directly under a "text" key, along with a corresponding "embedding" coordinate vector array.
+How to use in AI Studio/API: You can feed this JSON dataset directly into your custom RAG script or prompt context templates to bypass embedding calculations entirely. Because the embeddings are pre-computed, your pipeline won't need to perform any extra API calls to embed your resources.
+
+JSONL Format (Vertex AI Vector Search / Match Engine):
+Generates a newline-delimited JSON (JSONL) file where each line is structured as {"id": "...", "embedding": [...], "restricts": [...]}.
+How to use in Vertex AI: You can upload this file directly to a Google Cloud Storage bucket and deploy it straight into Google Vertex AI Vector Search to perform high-performance semantic search at scale without recalculating embeddings.
+
+CSV Format (Spreadsheets & Jupyter Notebooks):
+A classic comma-separated value table detailing original texts, summaries, categories, and stringified vector arrays for easy integration into Pandas or spreadsheet tools.
