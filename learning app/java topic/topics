@@ -1,0 +1,107 @@
+Complete, structured Core Java syllabus (exhaustive, version‑aware)
+Below I group every major Core Java topic, then list subtopics and types you must master as a professional software engineer. Use this as a checklist for study, interview prep, or curriculum design.
+
+
+
+1. Language Fundamentals
+Lexical structure: tokens, identifiers, literals, comments, Unicode.
+
+Types: primitive types; reference types; boxing/unboxing; type conversion.
+
+Operators & control flow: expressions, statements, switch expressions, enhanced for.
+
+Local‑variable type inference (var), text blocks.
+
+
+
+
+
+2. Object Oriented Programming
+Classes & objects, constructors, initialization blocks.
+
+Inheritance, method overriding, super, this.
+
+Polymorphism, dynamic dispatch.
+
+Encapsulation, access modifiers, nested & inner classes.
+
+Interfaces (default/static methods), functional interfaces, sealed classes.
+
+3. Advanced Language Features (Java 9–26 era)
+Modules (JPMS), module descriptors.
+
+Records, pattern matching (instanceof, switch), sealed types.
+
+Switch expressions, string templates, value objects (preview), structured concurrency (preview), virtual threads (Project Loom). 
+
+4. Generics
+Type parameters, wildcards (?, extends, super), type erasure, bounded types, generic methods, PECS.
+
+5. Collections Framework
+Interfaces: Collection, List, Set, Map, Queue, Deque.
+
+Implementations: ArrayList, LinkedList, HashSet, TreeSet, HashMap, ConcurrentHashMap, CopyOnWriteArrayList.
+
+Algorithms, iterators, spliterators, Collections utilities, concurrent collections.
+
+6. Functional Programming & Streams
+Lambda expressions, method references, FunctionalInterface.
+
+Streams API: intermediate/terminal ops, parallel streams, collectors, Optional.
+
+7. Concurrency & Parallelism
+Threads, Runnable, Callable, thread lifecycle.
+
+Executors, ScheduledExecutorService, ForkJoinPool.
+
+Synchronization, volatile, synchronized, locks, atomics.
+
+High‑level constructs: CountDownLatch, Semaphore, CyclicBarrier.
+
+Memory Model (JMM), happens‑before rules.
+
+Virtual threads & structured concurrency (modern features). 
+
+8. I/O and Networking
+java.io: streams, readers/writers, serialization (and alternatives).
+
+java.nio: buffers, channels, selectors, file APIs.
+
+Networking: Socket, ServerSocket, HttpClient (HTTP/2/3 support).
+
+9. JVM Internals & Performance
+Class loading, bytecode, class file format.
+
+JIT compilation, HotSpot, GraalVM overview.
+
+Garbage collection algorithms: Serial, Parallel, G1, ZGC, Shenandoah.
+
+Profiling, benchmarking, memory tuning.
+
+10. Standard Libraries & APIs
+Date‑Time API (java.time), Locale, ResourceBundle.
+
+Reflection, MethodHandle, InvokeDynamic.
+
+Annotations, annotation processing (APT), javax.annotation.
+
+Security: crypto APIs, keystore, TLS; Java 26 adds further crypto/AI enhancements. 
+
+11. Interoperability & Tooling
+JDBC, transactions, connection pooling.
+
+JNI/JNA, JMX, serialization formats (JSON, XML), java.util.spi.
+
+Build & packaging: javac, jlink, jpackage, Maven/Gradle integration.
+
+REPL: JShell.
+
+12. Testing, Best Practices, Patterns
+Unit testing (JUnit), mocking, design patterns, clean code, secure coding, concurrency patterns.
+
+How to use this list
+Start with Language → OOP → Collections → Streams → Concurrency.
+
+Practice with small projects that exercise JVM tuning, modules, and new features (records, virtual threads).
+
+For production, target Java 25 LTS; evaluate Java 26 for new features and migration planning. 
