@@ -105,3 +105,124 @@ Start with Language → OOP → Collections → Streams → Concurrency.
 Practice with small projects that exercise JVM tuning, modules, and new features (records, virtual threads).
 
 For production, target Java 25 LTS; evaluate Java 26 for new features and migration planning. 
+
+
+
+
+
+
+
+****Complete, version‑aware Core Java micro‑topics list — exhaustive checklist for a senior software engineer in Chengalpattu, India (current time 27 Jun 2026 16:10 IST).** Java 26 shipped as a non‑LTS release on 17 Mar 2026 with multiple JEPs (structured concurrency, lazy constants, HTTP/3, primitive patterns, vector API, GC improvements). 
+
+Language Fundamentals
+Lexical and syntax: Unicode escapes; tokenization; comments; identifiers; literals (integer, floating, boolean, char, string, text blocks).
+
+
+
+
+
+Types: primitives (byte, short, int, long, float, double, char, boolean); wrapper classes; boxing/unboxing; default values; type promotion & casting.
+
+Variables and scope: local, instance, static, final, effectively final; local‑variable type inference (var); shadowing.
+
+Operators and control flow: arithmetic, bitwise, relational, logical, ternary, assignment; if, switch (expressions & pattern switch), while, do, enhanced for, break/continue, labeled statements.
+
+
+
+
+
+Object Oriented Programming
+Classes and members: fields, methods, constructors, static initializers, instance initializers.
+
+Access control: public, protected, private, package; module exports.
+
+Inheritance and polymorphism: single inheritance, method overriding, covariant returns, super, this.
+
+Nested types: static nested, inner, local, anonymous classes.
+
+Interfaces and traits: abstract methods, default/static methods, private methods, functional interfaces, marker interfaces.
+
+Immutability patterns: final fields, defensive copies, record semantics.
+
+
+
+
+
+Generics and Type System
+Generic declarations: class, interface, method, constructor generics.
+
+Bounds: upper/lower bounds, multiple bounds, raw types.
+
+Wildcards: ?, ? extends, ? super; PECS rule.
+
+Type erasure: bridge methods, reified alternatives (VarHandles, MethodHandles).
+
+Collections and Data Structures
+Core interfaces: Collection, List, Set, Queue, Deque, Map, SortedSet, NavigableMap.
+
+Implementations: ArrayList, LinkedList, HashSet, TreeSet, HashMap, TreeMap, LinkedHashMap, EnumMap, WeakHashMap.
+
+Concurrent collections: ConcurrentHashMap, CopyOnWriteArrayList, BlockingQueue variants.
+
+Iterators and Spliterators, Comparator, Collections utilities, memory/complexity tradeoffs.
+
+
+
+
+
+Functional Programming and Streams
+Lambda syntax and capture rules; method references.
+
+Functional interfaces: Predicate, Function, Consumer, Supplier, UnaryOperator, BinaryOperator.
+
+Streams API: creation, intermediate ops, terminal ops, short‑circuiting, collectors, custom collectors, parallel streams, Optional patterns.
+
+Concurrency and Parallelism
+Threads: lifecycle, daemon vs user, interruption.
+
+Executors: ExecutorService, ScheduledExecutorService, ThreadPoolExecutor, ForkJoinPool.
+
+Synchronization: synchronized, volatile, Lock, ReadWriteLock, StampedLock.
+
+Atomics and concurrent utilities: Atomic*, CountDownLatch, CyclicBarrier, Semaphore, Phaser.
+
+Memory Model: happens‑before, reordering, visibility, safe publication.
+
+Modern features: virtual threads and structured concurrency (preview in recent JDKs). 
+
+
+
+
+
+I O Networking and HTTP
+java.io: Input/Output streams, Readers/Writers, serialization pitfalls.
+
+java.nio: Buffers, Channels, Selectors, Files API, memory‑mapped files.
+
+HTTP Client: java.net.http.HttpClient with HTTP/2 and HTTP/3 support in recent JDKs. 
+
+
+
+
+
+JVM Internals and Performance
+Class loading: bootstrap, platform, application loaders; linkage; classfile format.
+
+Bytecode and invokedynamic, MethodHandle.
+
+JIT and AOT, GraalVM overview.
+
+Garbage collectors: Serial, Parallel, CMS (deprecated), G1, ZGC, Shenandoah; GC tuning and ergonomics. 
+
+
+
+
+
+Libraries Tooling and Ecosystem
+Date Time API (java.time), i18n, Locale.
+
+Reflection and annotation processing, ServiceLoader.
+
+Security: TLS, keystore, PEM encodings (recent JEPs). 
+
+Build and packaging: javac, jlink, jpackage, Maven/Gradle, JShell.
